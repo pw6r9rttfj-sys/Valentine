@@ -56,6 +56,13 @@
         id="dayPlan"
         class="text-lg text-[#bd1e59] mt-1 space-y-2 hidden text-center"
       ></ul>
+      
+      <img
+        id="finalGif"
+        src="./images/ajpu8d.gif"
+        alt="Celebration gif"
+        class="mt-6 hidden w-72 max-w-full rounded-xl shadow-lg mx-auto"
+      />
 
       <div id="responseButtons" class="flex gap-4 pt-5 items-center">
         <button
@@ -84,6 +91,7 @@
       const valentineQuestion = document.getElementById('valentineQuestion');
       const responseButtons = document.getElementById('responseButtons');
       const dayPlan = document.getElementById('dayPlan');
+      const finalGif = document.getElementById('finalGif');
 
       // Configuration
       const GROWTH_PER_CLICK = 35;
@@ -167,6 +175,7 @@
 
         dayPlan.innerHTML = activities.map(item => `<li>${item}</li>`).join('');
         dayPlan.classList.remove('hidden');
+        finalGif.classList.remove('hidden');
 
         // Hide buttons
         responseButtons.style.display = 'none';
